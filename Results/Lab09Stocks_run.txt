@@ -1,0 +1,7 @@
+Учебные данные, не реальные котировки.
+TEST_SAME:30.0000
+TEST_DOWN:19.0000
+TEST_UP:11.0000
+Сохранено строк: 3
+Результат: /workspace/scratch/6823d4720338/compile_work/averages_demo.txt
+Ошибок: 0

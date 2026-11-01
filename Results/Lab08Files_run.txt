@@ -1,0 +1,6 @@
+Начальная папка: Имя файла с расширением: Найдено файлов: 1
+Файл: /workspace/scratch/6823d4720338/compile_work/SearchDemo/subfolder/note.txt
+Проверка FileStream и GZip.
+Строка 2.
+
+Сжать этот файл в GZip? (да/нет): Создан архив: /workspace/scratch/6823d4720338/compile_work/SearchDemo/subfolder/note.txt.gz

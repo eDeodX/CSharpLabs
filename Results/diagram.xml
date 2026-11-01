@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Assembly name="AnimalLibrary">
+  <Type name="AnimalLibrary.Animal" kind="class" abstract="true" base="System.Object">
+    <Attribute type="AnimalLibrary.CommentAttribute">
+      <Argument>Общий абстрактный класс животного</Argument>
+    </Attribute>
+    <Attribute type="System.Xml.Serialization.XmlIncludeAttribute">
+      <Argument>AnimalLibrary.Cow</Argument>
+    </Attribute>
+    <Attribute type="System.Xml.Serialization.XmlIncludeAttribute">
+      <Argument>AnimalLibrary.Lion</Argument>
+    </Attribute>
+    <Attribute type="System.Xml.Serialization.XmlIncludeAttribute">
+      <Argument>AnimalLibrary.Pig</Argument>
+    </Attribute>
+    <Comment>Общий абстрактный класс животного</Comment>
+    <Constructor access="protected/private">
+      <Parameters />
+    </Constructor>
+    <Constructor access="protected/private">
+      <Parameters>
+        <Parameter name="name" type="System.String" />
+        <Parameter name="country" type="System.String" />
+        <Parameter name="hide" type="System.Boolean" />
+        <Parameter name="whatAnimal" type="System.String" />
+        <Parameter name="classification" type="AnimalLibrary.eClassificationAnimal" />
+      </Parameters>
+    </Constructor>
+    <Property name="Country" type="System.String" read="true" write="true" />
+    <Property name="HideFromOtherAnimals" type="System.Boolean" read="true" write="true" />
+    <Property name="Name" type="System.String" read="true" write="true" />
+    <Property name="WhatAnimal" type="System.String" read="true" write="true" />
+    <Property name="Classification" type="AnimalLibrary.eClassificationAnimal" read="true" write="true" />
+    <Method name="Deconstruct" return="System.Void" abstract="false" virtual="false">
+      <Parameters>
+        <Parameter name="name" type="System.String&amp;" />
+        <Parameter name="country" type="System.String&amp;" />
+      </Parameters>
+    </Method>
+    <Method name="GetClassificationAnimal" return="AnimalLibrary.eClassificationAnimal" abstract="false" virtual="false">
+      <Parameters />
+    </Method>
+    <Method name="GetFavoriteFood" return="AnimalLibrary.eFavoriteFood" abstract="true" virtual="true">
+      <Parameters />
+    </Method>
+    <Method name="SayHello" return="System.String" abstract="true" virtual="true">
+      <Parameters />
+    </Method>
+    <Method name="ToString" return="System.String" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+  </Type>
+  <Type name="AnimalLibrary.CommentAttribute" kind="class" abstract="false" base="System.Attribute">
+    <Attribute type="System.AttributeUsageAttribute">
+      <Argument>4</Argument>
+    </Attribute>
+    <Attribute type="AnimalLibrary.CommentAttribute">
+      <Argument>Пользовательский атрибут с комментарием</Argument>
+    </Attribute>
+    <Comment>Пользовательский атрибут с комментарием</Comment>
+    <Constructor access="public">
+      <Parameters>
+        <Parameter name="comment" type="System.String" />
+      </Parameters>
+    </Constructor>
+    <Property name="Comment" type="System.String" read="true" write="true" />
+  </Type>
+  <Type name="AnimalLibrary.Cow" kind="class" abstract="false" base="AnimalLibrary.Animal">
+    <Attribute type="AnimalLibrary.CommentAttribute">
+      <Argument>Корова</Argument>
+    </Attribute>
+    <Comment>Корова</Comment>
+    <Constructor access="public">
+      <Parameters />
+    </Constructor>
+    <Constructor access="public">
+      <Parameters>
+        <Parameter name="name" type="System.String" />
+        <Parameter name="country" type="System.String" />
+        <Parameter name="hide" type="System.Boolean" />
+      </Parameters>
+    </Constructor>
+    <Method name="GetFavoriteFood" return="AnimalLibrary.eFavoriteFood" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+    <Method name="SayHello" return="System.String" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+  </Type>
+  <Type name="AnimalLibrary.Lion" kind="class" abstract="false" base="AnimalLibrary.Animal">
+    <Attribute type="AnimalLibrary.CommentAttribute">
+      <Argument>Лев</Argument>
+    </Attribute>
+    <Comment>Лев</Comment>
+    <Constructor access="public">
+      <Parameters />
+    </Constructor>
+    <Constructor access="public">
+      <Parameters>
+        <Parameter name="name" type="System.String" />
+        <Parameter name="country" type="System.String" />
+        <Parameter name="hide" type="System.Boolean" />
+      </Parameters>
+    </Constructor>
+    <Method name="GetFavoriteFood" return="AnimalLibrary.eFavoriteFood" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+    <Method name="SayHello" return="System.String" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+  </Type>
+  <Type name="AnimalLibrary.Pig" kind="class" abstract="false" base="AnimalLibrary.Animal">
+    <Attribute type="AnimalLibrary.CommentAttribute">
+      <Argument>Свинья</Argument>
+    </Attribute>
+    <Comment>Свинья</Comment>
+    <Constructor access="public">
+      <Parameters />
+    </Constructor>
+    <Constructor access="public">
+      <Parameters>
+        <Parameter name="name" type="System.String" />
+        <Parameter name="country" type="System.String" />
+        <Parameter name="hide" type="System.Boolean" />
+      </Parameters>
+    </Constructor>
+    <Method name="GetFavoriteFood" return="AnimalLibrary.eFavoriteFood" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+    <Method name="SayHello" return="System.String" abstract="false" virtual="true">
+      <Parameters />
+    </Method>
+  </Type>
+  <Type name="AnimalLibrary.eClassificationAnimal" kind="enum" abstract="false" base="System.Enum">
+    <Value>Herbivores</Value>
+    <Value>Carnivores</Value>
+    <Value>Omnivores</Value>
+    <Field name="value__" type="System.Int32" />
+    <Field name="Herbivores" type="AnimalLibrary.eClassificationAnimal" />
+    <Field name="Carnivores" type="AnimalLibrary.eClassificationAnimal" />
+    <Field name="Omnivores" type="AnimalLibrary.eClassificationAnimal" />
+  </Type>
+  <Type name="AnimalLibrary.eFavoriteFood" kind="enum" abstract="false" base="System.Enum">
+    <Value>Meat</Value>
+    <Value>Plants</Value>
+    <Value>Everything</Value>
+    <Field name="value__" type="System.Int32" />
+    <Field name="Meat" type="AnimalLibrary.eFavoriteFood" />
+    <Field name="Plants" type="AnimalLibrary.eFavoriteFood" />
+    <Field name="Everything" type="AnimalLibrary.eFavoriteFood" />
+  </Type>
+</Assembly>

@@ -1,0 +1,8 @@
+Animal: Общий абстрактный класс животного
+CommentAttribute: Пользовательский атрибут с комментарием
+Cow: Корова
+Lion: Лев
+Pig: Свинья
+eClassificationAnimal
+eFavoriteFood
+XML сохранён: /workspace/scratch/6823d4720338/compile_work/diagram.xml

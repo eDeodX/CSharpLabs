@@ -1,0 +1,2 @@
+До сериализации: Бурёнка, Корова, Россия, прячется: False, Herbivores, еда: Plants, голос: Му!
+Объект сохранён: /workspace/scratch/6823d4720338/compile_work/animal.xml
