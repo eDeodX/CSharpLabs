@@ -12,5 +12,27 @@ fieldset { display: grid; gap: 8px; border: 1px solid #ccdbe6; padding: 16px; ma
 input, select, textarea, button { padding: 8px; font: inherit; }
 button { cursor: pointer; }
 td form { display: inline; }
+td > a, td > form > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    min-height: 38px;
+    padding: 6px 12px;
+    border: 1px solid #a9bfce;
+    border-radius: 6px;
+    background: #f1f7fb;
+    color: #005c90;
+    font: inherit;
+    text-decoration: none;
+    vertical-align: middle;
+}
+td > a:hover { background: #e4eef5; }
+td > form > button {
+    border-color: #ddb5b9;
+    background: #fff4f4;
+    color: #9b1922;
+}
+td > form > button:hover { background: #fbe5e7; }
 .validation-summary-errors, .field-validation-error, .error { color: #9b1922; }
 .table-wrap { overflow-x: auto; margin-bottom: 20px; }
