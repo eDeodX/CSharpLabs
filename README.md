@@ -1,6 +1,7 @@
-# Лабораторные работы 7–10
+# Лабораторные работы 7–12
 
-- `Code` — исходники и необходимые данные. Открой `Code/Labs07_10.sln` в Visual Studio с .NET 8.
-- `Reports` — четыре отчёта в PDF.
+- ЛР7–10: решение [`Code/Labs07_10.sln`](Code/Labs07_10.sln).
+- ЛР11–12: решение [`Code/Labs11_12/Labs11_12.sln`](Code/Labs11_12/Labs11_12.sln) и [инструкции запуска](Code/Labs11_12/README.md).
+- [Reports](Reports) — отчёты в PDF.
 
-Для WinForms нужна Windows. ЛР10 использует EF Core и SQLite; NuGet-пакеты восстановятся при сборке.
+Для сборки нужен .NET 8. Для WinForms нужна Windows. В ЛР11 Docker используется для базы Northwind; ЛР12 использует SQLite.

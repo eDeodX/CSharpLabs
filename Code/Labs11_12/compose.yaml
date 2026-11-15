@@ -1,0 +1,13 @@
+services:
+  northwind:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?Set MSSQL_SA_PASSWORD}
+    ports:
+      - "127.0.0.1:14333:1433"
+    volumes:
+      - northwind-data:/var/opt/mssql
+volumes:
+  northwind-data:

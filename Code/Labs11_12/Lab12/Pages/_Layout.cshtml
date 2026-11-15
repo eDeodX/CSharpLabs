@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] | Приёмное отделение</title>
+    <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header>
+    <nav aria-label="Разделы">
+        <a asp-page="/Index">Главная</a>
+        <a asp-page="/Patients">Пациенты</a>
+        <a asp-page="/Doctors">Врачи</a>
+        <a asp-page="/Admissions">Обращения</a>
+    </nav>
+</header>
+<main>@RenderBody()</main>
+</body>
+</html>
